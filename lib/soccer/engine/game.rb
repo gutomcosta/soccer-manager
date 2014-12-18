@@ -3,9 +3,10 @@ module Soccer
     class Game
       attr_reader :subscribers
 
-      def initialize(team1, team2)
+      def initialize(team1, team2, event_listener)
         @team1 = team1
         @team2 = team2
+        @event_listener = event_listener
         @subscribers = {}
       end
 
@@ -15,6 +16,10 @@ module Soccer
         else
          @subscribers[event] = [subscriber]
         end
+      end
+
+      def start
+        @event_listener.publish(:game_started)
       end
     end
   end
