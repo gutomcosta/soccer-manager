@@ -11,11 +11,7 @@ module Soccer
       end
 
       def subscribe(event, subscriber)
-        if @subscribers.has_key?(event)
-          @subscribers[event] << subscriber
-        else
-         @subscribers[event] = [subscriber]
-        end
+        @event_listener.subscribe(event, subscriber)
       end
 
       def start
