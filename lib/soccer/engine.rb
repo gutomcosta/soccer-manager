@@ -1,6 +1,7 @@
 require "soccer/engine/version"
 require "soccer/engine/game"
 require "soccer/engine/event_listener"
+require "soccer/subscribers/game_started_subscriber"
 
 module Soccer
   module Engine

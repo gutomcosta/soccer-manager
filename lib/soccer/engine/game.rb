@@ -15,7 +15,7 @@ module Soccer
       end
 
       def start
-        @event_listener.publish(:game_started)
+        @event_listener.publish(:game_started, team1: @team1, team2: @team2)
       end
     end
   end

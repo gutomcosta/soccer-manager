@@ -9,7 +9,8 @@ describe Soccer::Engine::Game do
 
   describe ".start" do 
     it "publishes a game_started event" do 
-      expect(soccer_event_listener).to receive(:publish).with(:game_started)
+      data = {team1: team1, team2: team2}
+      expect(soccer_event_listener).to receive(:publish).with(:game_started, data)
       game.start
     end
   end
