@@ -9,6 +9,9 @@ module Soccer
         end
 
         def possible_actions
+          markov_chain = {:shor_pass => 0.3, :long_pass => 0.4}
+
+
           
         end
       end
