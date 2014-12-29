@@ -4,6 +4,7 @@ require "soccer/engine/randomizer"
 require "soccer/engine/dice"
 require "soccer/engine/event_listener"
 require "soccer/subscribers/game_started_subscriber"
+require "soccer/teams/team"
 
 module Soccer
   module Engine
