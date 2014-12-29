@@ -5,6 +5,8 @@ require "soccer/engine/dice"
 require "soccer/engine/event_listener"
 require "soccer/subscribers/game_started_subscriber"
 require "soccer/teams/team"
+require "soccer/teams/player"
+require "soccer/teams/positions/goal_keeper"
 
 module Soccer
   module Engine
