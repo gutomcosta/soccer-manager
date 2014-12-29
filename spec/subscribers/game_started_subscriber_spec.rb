@@ -10,7 +10,7 @@ describe Soccer::Subscribers::GameStartedSubscriber do
  
   describe ".execute" do 
     before(:each) do 
-      team2.stub(:start)
+      allow(team2).to receive(:start)
     end    
 
     it "should select a team to start a game" do
@@ -19,7 +19,7 @@ describe Soccer::Subscribers::GameStartedSubscriber do
     end
     
     it "should call for a selected team to start" do 
-      dice.stub(:roll).and_return(team2)
+      allow(dice).to receive(:roll).and_return(team2)
       expect(team2).to receive(:start)
       game_started_subscriber.execute(team1: team1, team2: team2)
     end
