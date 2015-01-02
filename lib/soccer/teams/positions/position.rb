@@ -8,12 +8,17 @@ module Soccer
           @name = ""
         end
 
-        def possible_actions
-          markov_chain = {:shor_pass => 0.3, :long_pass => 0.4}
-
-
-          
+        def get_defender_positions(position)
+          possibilities = {
+            goalkeeper: { foward: 100 } ,
+            defender: { center_foward: 40, foward: 40, midfielder: 20 },
+            midfielder: { midfielder: 70, defender: 30 },
+            foward: { defender: 100 },
+            center_foward: { defender: 100 }
+          }
+          possibilities[position.name]
         end
+
       end
     end
   end
