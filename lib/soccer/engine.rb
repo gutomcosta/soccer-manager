@@ -6,8 +6,11 @@ require "soccer/engine/event_listener"
 require "soccer/subscribers/game_started_subscriber"
 require "soccer/teams/team"
 require "soccer/teams/player"
-require "soccer/teams/positions/goal_keeper"
 require "soccer/teams/actions/short_pass"
+require "soccer/teams/positions/goal_keeper"
+require "soccer/teams/positions/center_foward"
+require "soccer/teams/positions/foward"
+require "soccer/teams/positions/midfielder"
 
 module Soccer
   module Engine
