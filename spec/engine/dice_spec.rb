@@ -31,6 +31,24 @@ describe Soccer::Engine::Dice do
 
   end
 
+  describe ".roll_to_choose" do 
+    
+    it "returns :foward when choices are {forward: 100}" do 
+      choice = dice.roll_to_choose({foward: 100})
+      expect(choice).to eql(:foward)
+    end
+
+    it "returns :midfielder when choices are {defender: 30, midfielder: 70} and guess between 1 and 70" do 
+      allow(dice).to receive(:roll).and_return(55, 1, 10, 20, 70)
+      expect(dice.roll_to_choose({defender: 30, midfielder: 70})).to eql(:midfielder)
+      expect(dice.roll_to_choose({defender: 30, midfielder: 70})).to eql(:midfielder)
+      expect(dice.roll_to_choose({defender: 30, midfielder: 70})).to eql(:midfielder)
+      expect(dice.roll_to_choose({defender: 30, midfielder: 70})).to eql(:midfielder)
+      expect(dice.roll_to_choose({defender: 30, midfielder: 70})).to eql(:midfielder)
+    end
+
+  end
+
 
 
 end
