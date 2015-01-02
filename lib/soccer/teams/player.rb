@@ -22,6 +22,12 @@ module Soccer
         action.execute(player: self, team: @team)
       end
 
+      def final_score_against(other_player)
+        #   luck = dice.roll((1..60 ).to_a)
+        #   score = player.score - defender.score
+        #   effective_score = score + luck
+      end
+
     end
   end
 end

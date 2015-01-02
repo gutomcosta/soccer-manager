@@ -7,6 +7,7 @@ require "soccer/subscribers/game_started_subscriber"
 require "soccer/teams/team"
 require "soccer/teams/player"
 require "soccer/teams/positions/goal_keeper"
+require "soccer/teams/actions/short_pass"
 
 module Soccer
   module Engine
