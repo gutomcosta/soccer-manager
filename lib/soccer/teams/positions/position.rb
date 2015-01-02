@@ -1,11 +1,11 @@
 module Soccer
   module Teams
     module Positions
-      class GoalKeeper < Position
+      class Position
         attr_reader :name
 
         def initializer
-          @name = :goalkeeper
+          @name = ""
         end
 
         def possible_actions

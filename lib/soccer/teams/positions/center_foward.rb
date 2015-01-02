@@ -1,7 +1,7 @@
 module Soccer
   module Teams
     module Positions
-      class CenterFoward
+      class CenterFoward < Position
         attr_reader :name
 
         def initializer

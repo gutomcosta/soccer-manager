@@ -1,7 +1,7 @@
 module Soccer
   module Teams
     module Positions
-      class Defender
+      class Defender < Position
         attr_reader :name
 
         def initializer
