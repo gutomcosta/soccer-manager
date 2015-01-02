@@ -15,5 +15,12 @@ describe Soccer::Engine::Game do
     end
   end
 
+  describe ".opponent_from" do 
+    it "gets the opponent of a team" do 
+      opponent = game.opponent_from(team1)
+      expect(opponent).to eql(team2)
+    end
+  end
+
 
 end

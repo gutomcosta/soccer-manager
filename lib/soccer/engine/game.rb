@@ -7,7 +7,6 @@ module Soccer
         @team1 = team1
         @team2 = team2
         @event_listener = event_listener
-        @subscribers = {}
       end
 
       def subscribe(event, subscriber)
@@ -16,6 +15,11 @@ module Soccer
 
       def start
         @event_listener.publish(:game_started, team1: @team1, team2: @team2)
+      end
+
+      def opponent_from(team)
+        teams  = [@team1, @team2]
+        teams.select {|t| t != team }.first
       end
     end
   end

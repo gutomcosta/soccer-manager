@@ -12,8 +12,8 @@ module Soccer
 
       # maybe is better move this to position
       def check_position(position)
-        valid_positions = [ :goalkeeper, :defender, :midfielder, :forward ]
-        raise "[ Player.new ] - Invalid position. The valid positions are: [ goalkeeper, defender, midfielder, forward ]" unless valid_positions.include?(position.name)
+        valid_positions = [ :goalkeeper, :defender, :midfielder, :forward, :center_foward ]
+        raise "[ Player.new ] - Invalid position. The valid positions are: [ goalkeeper, defender, midfielder, forward, center_foward ]" unless valid_positions.include?(position.name)
       end
 
       def execute_an_action

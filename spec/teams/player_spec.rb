@@ -24,7 +24,7 @@ describe Soccer::Teams::Player do
     end
 
     it "raises an error if the position is invalid" do
-      expect{ Soccer::Teams::Player.new(dice, double(name: :atacante), team) }.to raise_error("[ Player.new ] - Invalid position. The valid positions are: [ goalkeeper, defender, midfielder, forward ]")
+      expect{ Soccer::Teams::Player.new(dice, double(name: :atacante), team) }.to raise_error("[ Player.new ] - Invalid position. The valid positions are: [ goalkeeper, defender, midfielder, forward, center_foward ]")
     end
   end
 

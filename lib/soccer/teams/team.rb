@@ -13,6 +13,13 @@ module Soccer
         player.execute_an_action
       end
 
+      def get_defender_for(position)
+        defender_positions = position.get_defender_positions
+        position_name      = @dice.roll_to_choose(defender_positions)
+        selected_positions = @players.select {|p| p.position_name == position_name}
+        dice.roll(selected_positions)
+      end
+
     end
   end
 end
