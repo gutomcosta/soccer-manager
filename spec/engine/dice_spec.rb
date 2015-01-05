@@ -32,6 +32,10 @@ describe Soccer::Engine::Dice do
   end
 
   describe ".roll_to_choose" do 
+
+    it "raises an error if the probabilities not add up to 100%" do 
+      expect{dice.roll_to_choose(defender: 20, midfielder: 30)}.to raise_error("[dice.roll_to_choose] - The sum of the probabilities are not 100%")
+    end
     
     it "returns :foward when choices are {forward: 100}" do 
       choice = dice.roll_to_choose({foward: 100})

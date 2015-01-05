@@ -15,6 +15,7 @@ module Soccer
       end
 
       def roll_to_choose(choices) 
+        raise "[dice.roll_to_choose] - The sum of the probabilities are not 100%" if not probabilities_are_100?(choices)
         guess = roll((1..100).to_a)
         ranges = transform_in_ranges(choices)
         ranges.each_pair do |key, value|
@@ -23,6 +24,11 @@ module Soccer
       end
 
       private 
+
+      def probabilities_are_100?(choices)
+        total = choices.map {|k,v| v}.reduce(:+)
+        return total == 100
+      end
 
       def transform_in_ranges(choices)
         ranges        = {}
@@ -44,3 +50,9 @@ module Soccer
 end
 
 
+
+
+
+
+
+ 
