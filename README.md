@@ -1,9 +1,9 @@
 # Soccer::Engine
 
-This is an atempt to build a probabilistic soccer manager game using Markov Chains and Probabilistic Programming.
-My goal here, is to use these concepts in a pet-project just to pratice. I don't have the intetion to build the next generation of Soccer Manager games, rs.
+This is an attempt to build soccer manager game using Markov Chains and Probabilistic Programming.
+My goal here, is to use these concepts in a pet-project just to pratice. I don't have the intention to build the next generation of Soccer Manager games, rs.
 
-The basic idea is that players, in na determinted position, have possible actions,  and this actions have probabilities associated.
+The basic idea is that players, in a determined position, have possible actions,  and this actions have probabilities 
 
 For example:
 A player with a Foward position, should can be a something like this:
@@ -20,7 +20,7 @@ The engine use this probabilities to choose what is the action that a player wil
 
 
 ## Usage
-We need to two teams and a event listener.
+We need of two teams and a event listener.
 To start a game:
 
 ```ruby
