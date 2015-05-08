@@ -63,7 +63,7 @@ describe Soccer::Teams::Team do
       allow(dice).to receive(:roll)
     end
 
-    it  "asks the position to possible defender positions and his probabilities" do 
+    it  "asks the position what is the possible defender position and his probabilities" do 
       position = double
       expect(position).to receive(:get_defender_positions)
       team.get_defender_for(position)
