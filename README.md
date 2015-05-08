@@ -1,26 +1,31 @@
 # Soccer::Engine
 
-TODO: Write a gem description
+This is an atempt to build a probabilistic soccer manager game using Markov Chains and Probabilistic Programming.
+My goal here, is to use these concepts in a pet-project just to pratice. I don't have the intetion to build the next generation of Soccer Manager games, rs.
 
-## Installation
+The basic idea is that players, in na determinted position, have possible actions,  and this actions have probabilities associated.
 
-Add this line to your application's Gemfile:
+For example:
+A player with a Foward position, should can be a something like this:
 
 ```ruby
-gem 'soccer-engine'
+ {
+  short_pass: 0.20,
+  long_pass: 0.10,
+  shot_on_goal: 0.70
+}
 ```
 
-And then execute:
+The engine use this probabilities to choose what is the action that a player will do.
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install soccer-engine
 
 ## Usage
+We need to two teams and a event listener.
+To start a game:
 
-TODO: Write usage instructions here
+```ruby
+  Soccer::Engine.start_game(team1, team2, event_listener)
+```
 
 ## Contributing
 
